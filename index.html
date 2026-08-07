@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Join the Music Club</title>
-
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.1.1/css/pico.classless.min.css"
@@ -16,44 +15,115 @@
     <header>
       <nav>
         <ul>
-          <li><a href="#welcome">Welcome</a></li>
-          <li><a href="#why">Why Join</a></li>
-          <li><a href="#join">Join</a></li>
+          <li><a href="#welcome">Enter Pulse</a></li>
+          <li><a href="#why">Why Pulse</a></li>
+          <li><a href="#join">Find your Pulse</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <section id="welcome">
-        <h1>Music Club</h1>
+        <h1>Pulse</h1>
         <p>Turn your noise down and your music up.</p>
-        <a href="#join">Join us</a>
+        <a href="#join">Find your Pulse</a>
       </section>
       <section id="why">
-        <h2>Why Join</h2>
-        <article>
-          <h3>Discover new music</h3>
-          <p>
-            Share favoritess, trade recommendations, and discover artists you
-            may have missed
-          </p>
-        </article>
-        <article>
-          <h3>Connect throught music</h3>
-          <p>
-            Meet people who enjoy talking about whaat they listen to and why it
-            matters
-          </p>
-        </article>
-        <article>
-          <h3>Make time to listen</h3>
-          <p>
-            Step away from the noise and spend time with music intentionally.
-          </p>
-        </article>
+        <h2>Why Pulse</h2>
+        <div class="flex-container">
+          <article>
+            <h3>Discover new music</h3>
+            <p>
+              Share favoritess, trade recommendations, and discover artists you
+              may have missed
+            </p>
+          </article>
+          <article>
+            <h3>Connect through music</h3>
+            <p>
+              Meet people who enjoy talking about what they listen to and why it
+              matters
+            </p>
+          </article>
+          <article>
+            <h3>Make time to listen</h3>
+            <p>
+              Step away from the noise and spend time with music intentionally.
+            </p>
+          </article>
+        </div>
       </section>
       <section id="join">
-        <h2>Join</h2>
-        <p>Signups open this week - the form lands here on Day 2.</p>
+        <h2>Step into the Pulse</h2>
+        <form>
+          <label
+            >Signal your Pulse ID
+            <input
+              id="member-name"
+              name="member-name"
+              type="text"
+              required
+              placeholder="Enter your username"
+            />
+          </label>
+
+          <label
+            >Pulse line (if you want to stay connected)
+            <input
+              id="member-email"
+              name="member-email"
+              type="email"
+              placeholder="Enter your email address"
+            />
+          </label>
+
+          <label
+            >Create your access key
+            <input
+              id="member-password"
+              name="member-password"
+              type="password"
+              required
+              placeholder="Enter your password"
+            />
+          </label>
+
+          <label
+            >Confirm your access key
+            <input
+              id="member-password"
+              name="member-password"
+              type="password"
+              required
+              placeholder="Re-enter your acccess key"
+            />
+          </label>
+          <label
+            >What does music mean to you?
+            <textarea id="member-meaning" name="member-meaning"></textarea>
+          </label>
+          <label
+            >How did you hear about Pulse?
+            <select id="member-source" name="member-source">
+              <option>A friend</option>
+              <option>Social media</option>
+              <option>Just browsing</option>
+            </select>
+          </label>
+          <div class="pulse-action">
+            <button>Become your Pulse</button>
+            <p>🤘Music For The People🫶</p>
+          </div>
+        </form>
+      </section>
+      <section id="field-notes">
+        <h2>Field notes: block and inline</h2>
+        <p>
+          A paragraph is a block. Inside it, <strong>strong words</strong>,
+          <a href="#welcome">links</a>, and <span>plain spans</span> stay in
+          line.
+        </p>
+        <div>A div takes the whole row.</div>
+        <p>So does a paragraph.</p>
       </section>
     </main>
     <footer>

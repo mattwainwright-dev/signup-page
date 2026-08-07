@@ -1,0 +1,28 @@
+.pulse-action {
+  width: fit-content;
+  text-align: center;
+}
+#welcome {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+#why article {
+  padding: 2rem;
+}
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-container article {
+  width: 30%;
+}
+#field-notes span,
+#field-notes strong,
+#field-notes a {
+  outline: 2px dashed darkorange;
+}
+
+#field-notes div,
+#field-notes p {
+  outline: 2px solid seagreen;
+}
