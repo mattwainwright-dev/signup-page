@@ -38,8 +38,13 @@ input:invalid {
   border: 2px dashed darkorange;
 }
 #welcome h1 {
-  text-shadow: 0 0 10px cyan;
+  text-shadow: -6px -6px 0 cyan;
 }
 #welcome a:hover {
   background-color: cyan;
+  color: whitesmoke;
+}
+/* Makes the signature line quieter so the main Pulse content stays the focus */
+footer p {
+  font-size: 0.8rem;
 }
