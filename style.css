@@ -4,6 +4,24 @@
   text-align: center;
 }
 
+/* Places the Pulse action and video on opposite sides of the form */
+.join-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Styles the Pulse video and keeps it responsive */
+.join-bottom video {
+  width: 240px;
+  max-width: 100%;
+  height: auto;
+  border: 2px solid cyan;
+  box-shadow: 0 0 0 4px black;
+}
+
 /* Hero section layout and spacing */
 #welcome {
   text-align: center;
@@ -100,6 +118,14 @@ nav a:hover {
     0 0 8px cyan,
     0 0 16px cyan,
     0 0 24px cyan;
+}
+
+/* Keeps the hero link readable over the bright Pulse logo */
+#welcome > a {
+  text-shadow:
+    0 0 4px black,
+    0 0 8px black,
+    0 0 12px black;
 }
 
 /* Styles the signup button with Pulse cyan and black text */
