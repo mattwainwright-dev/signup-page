@@ -70,11 +70,20 @@ body {
   background-color: black;
   color: whitesmoke;
 }
+
+/* Gives links and headings the Pulse cyan color */
 a,
 h1,
 h2,
 h3 {
   color: cyan;
+}
+
+/* Adds a black outline so headings stay readable over the bright pulse line */
+h1,
+h2,
+h3 {
+  -webkit-text-stroke: 3px black;
 }
 
 /*Pulse nav hover glow*/
@@ -84,16 +93,22 @@ nav a:hover {
     0 0 16px cyan,
     0 0 24px cyan;
 }
+
+/* Gives the hero Find your Pulse link the same hover glow as the nav */
 #welcome a:hover {
   text-shadow:
     0 0 8px cyan,
     0 0 16px cyan,
     0 0 24px cyan;
 }
+
+/* Styles the signup button with Pulse cyan and black text */
 button {
   background-color: cyan;
   color: black;
 }
+
+/* Adds a cyan glow to the signup button on hover */
 button:hover {
   background-color: cyan;
   color: black;
@@ -115,4 +130,30 @@ button:hover {
       0 0 16px cyan;
     transform: scale(1.04);
   }
+}
+
+/* Keeps the Pulse background image fixed behind the entire page */
+.pulse-bg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Keeps the page content layered above the Pulse background */
+header,
+main,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Adds a dark glow behind the hero tagline for readability */
+#welcome p {
+  text-shadow:
+    0 0 4px black,
+    0 0 8px black,
+    0 0 12px black;
 }
