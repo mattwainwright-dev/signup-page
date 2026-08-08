@@ -3,11 +3,13 @@
   width: fit-content;
   text-align: center;
 }
+
 /* Hero section layout and spacing */
 #welcome {
   text-align: center;
   padding: 4rem 1rem;
 }
+
 /* Why Pulse card layout */
 #why article {
   padding: 2rem;
@@ -15,10 +17,19 @@
 .flex-container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .flex-container article {
   width: 30%;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
+.flex-container article:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 18px cyan;
+}
+
 /* Field Notes: compares inline and block elements */
 #field-notes span,
 #field-notes strong,
@@ -30,6 +41,7 @@
 #field-notes p {
   outline: 2px solid seagreen;
 }
+
 /* Form feedback for focus and validation */
 input:focus,
 textarea:focus {
@@ -42,15 +54,65 @@ textarea:focus {
 input:invalid {
   border: 2px dashed darkorange;
 }
+
 /* Pulse hero visual effects */
 #welcome h1 {
-  text-shadow: -6px -6px 0 cyan;
+  text-shadow: 0 0 12px cyan;
 }
-#welcome a:hover {
-  background-color: cyan;
-  color: whitesmoke;
-}
+
 /* Makes the signature line quieter so the main Pulse content stays the focus */
 footer p {
   font-size: 0.8rem;
+}
+
+/* Pulse color foundation */
+body {
+  background-color: black;
+  color: whitesmoke;
+}
+a,
+h1,
+h2,
+h3 {
+  color: cyan;
+}
+
+/*Pulse nav hover glow*/
+nav a:hover {
+  text-shadow:
+    0 0 8px cyan,
+    0 0 16px cyan,
+    0 0 24px cyan;
+}
+#welcome a:hover {
+  text-shadow:
+    0 0 8px cyan,
+    0 0 16px cyan,
+    0 0 24px cyan;
+}
+button {
+  background-color: cyan;
+  color: black;
+}
+button:hover {
+  background-color: cyan;
+  color: black;
+  box-shadow: 0 0 14px cyan;
+}
+/* MFTP pulse effect */
+.pulse-action p {
+  animation: mftp-pulse 1.8s infinite;
+}
+@keyframes mftp-pulse {
+  0%,
+  100% {
+    text-shadow: 0 0 4px cyan;
+    transform: scale(1);
+  }
+  50% {
+    text-shadow:
+      0 0 8px cyan,
+      0 0 16px cyan;
+    transform: scale(1.04);
+  }
 }
