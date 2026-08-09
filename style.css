@@ -1,3 +1,122 @@
+/* Pulse color foundation */
+body {
+  background-color: black;
+  color: whitesmoke;
+}
+
+/* Gives links and headings the Pulse cyan color */
+a,
+h1,
+h2,
+h3 {
+  color: cyan;
+}
+
+/* Adds a black outline so headings stay readable over the bright pulse line */
+h1,
+h2,
+h3 {
+  -webkit-text-stroke: 3px black;
+}
+
+/* Keeps the Pulse background image fixed behind the entire page */
+.pulse-bg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Keeps the page content layered above the Pulse background */
+header,
+main,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+/*Pulse nav hover glow*/
+nav a:hover {
+  text-shadow:
+    0 0 8px cyan,
+    0 0 16px cyan,
+    0 0 24px cyan;
+}
+
+/* Hero section layout and spacing */
+#welcome {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+/* Pulse hero visual effects */
+#welcome h1 {
+  text-shadow: 0 0 12px cyan;
+}
+
+/* Keeps the hero link readable over the bright Pulse logo */
+#welcome > a {
+  text-shadow:
+    0 0 4px black,
+    0 0 8px black,
+    0 0 12px black;
+}
+
+/* Adds a dark glow behind the hero tagline for readability */
+#welcome p {
+  text-shadow:
+    0 0 6px black,
+    0 0 10px black,
+    0 0 14px black;
+}
+
+/* Gives the hero Find your Pulse link the same hover glow as the nav */
+#welcome a:hover {
+  text-shadow:
+    0 0 8px cyan,
+    0 0 16px cyan,
+    0 0 24px cyan;
+}
+
+/* Why Pulse card layout */
+#why article {
+  padding: 2rem;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.flex-container article {
+  width: 30%;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.flex-container article:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 18px cyan;
+}
+
+/* Form feedback for focus and validation */
+input:focus,
+textarea:focus {
+  outline: 3px solid steelblue;
+  background-color: lightyellow;
+}
+
+#member-email:valid {
+  border: 2px solid seagreen;
+}
+
+input:invalid {
+  border: 2px dashed darkorange;
+}
+
 /* Centers the signup button and tagline together */
 .pulse-action {
   width: fit-content;
@@ -22,112 +141,6 @@
   box-shadow: 0 0 0 4px black;
 }
 
-/* Hero section layout and spacing */
-#welcome {
-  text-align: center;
-  padding: 4rem 1rem;
-}
-
-/* Why Pulse card layout */
-#why article {
-  padding: 2rem;
-}
-.flex-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-.flex-container article {
-  width: 30%;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-}
-.flex-container article:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 18px cyan;
-}
-
-/* Field Notes: compares inline and block elements */
-#field-notes span,
-#field-notes strong,
-#field-notes a {
-  outline: 2px dashed darkorange;
-}
-
-#field-notes div,
-#field-notes p {
-  outline: 2px solid seagreen;
-}
-
-/* Form feedback for focus and validation */
-input:focus,
-textarea:focus {
-  outline: 3px solid steelblue;
-  background-color: lightyellow;
-}
-#member-email:valid {
-  border: 2px solid seagreen;
-}
-input:invalid {
-  border: 2px dashed darkorange;
-}
-
-/* Pulse hero visual effects */
-#welcome h1 {
-  text-shadow: 0 0 12px cyan;
-}
-
-/* Makes the signature line quieter so the main Pulse content stays the focus */
-footer p {
-  font-size: 0.8rem;
-}
-
-/* Pulse color foundation */
-body {
-  background-color: black;
-  color: whitesmoke;
-}
-
-/* Gives links and headings the Pulse cyan color */
-a,
-h1,
-h2,
-h3 {
-  color: cyan;
-}
-
-/* Adds a black outline so headings stay readable over the bright pulse line */
-h1,
-h2,
-h3 {
-  -webkit-text-stroke: 3px black;
-}
-
-/*Pulse nav hover glow*/
-nav a:hover {
-  text-shadow:
-    0 0 8px cyan,
-    0 0 16px cyan,
-    0 0 24px cyan;
-}
-
-/* Gives the hero Find your Pulse link the same hover glow as the nav */
-#welcome a:hover {
-  text-shadow:
-    0 0 8px cyan,
-    0 0 16px cyan,
-    0 0 24px cyan;
-}
-
-/* Keeps the hero link readable over the bright Pulse logo */
-#welcome > a {
-  text-shadow:
-    0 0 4px black,
-    0 0 8px black,
-    0 0 12px black;
-}
-
 /* Styles the signup button with Pulse cyan and black text */
 button {
   background-color: cyan;
@@ -140,10 +153,12 @@ button:hover {
   color: black;
   box-shadow: 0 0 14px cyan;
 }
+
 /* MFTP pulse effect */
 .pulse-action p {
   animation: mftp-pulse 1.8s infinite;
 }
+
 @keyframes mftp-pulse {
   0%,
   100% {
@@ -157,29 +172,19 @@ button:hover {
     transform: scale(1.04);
   }
 }
-
-/* Keeps the Pulse background image fixed behind the entire page */
-.pulse-bg {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
+/* Field Notes: compares inline and block elements */
+#field-notes span,
+#field-notes strong,
+#field-notes a {
+  outline: 2px dashed darkorange;
 }
 
-/* Keeps the page content layered above the Pulse background */
-header,
-main,
-footer {
-  position: relative;
-  z-index: 1;
+#field-notes div,
+#field-notes p {
+  outline: 2px solid seagreen;
 }
 
-/* Adds a dark glow behind the hero tagline for readability */
-#welcome p {
-  text-shadow:
-    0 0 6px black,
-    0 0 10px black,
-    0 0 14px black;
+/* Makes the signature line quieter so the main Pulse content stays the focus */
+footer p {
+  font-size: 0.8rem;
 }
