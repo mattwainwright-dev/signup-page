@@ -179,7 +179,7 @@ footer {
 /* Adds a dark glow behind the hero tagline for readability */
 #welcome p {
   text-shadow:
-    0 0 4px black,
-    0 0 8px black,
-    0 0 12px black;
+    0 0 6px black,
+    0 0 10px black,
+    0 0 14px black;
 }
