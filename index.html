@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en" data-theme="dark">
   <head>
+    <!-- Sets up the page and connects Pico CSS and my custom stylesheet -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pulse</title>
@@ -12,6 +13,7 @@
   </head>
 
   <body>
+    <!-- Pulse watermark logo used for background image-->
     <img class="pulse-bg" src="pulse-logo(5).png" alt="" />
     <header>
       <nav>
@@ -101,6 +103,7 @@
               placeholder="Re-enter your access key"
             />
           </label>
+          <!-- Collects the user's music response and how they found Pulse -->
           <label
             >What does music mean to you?
             <textarea id="member-meaning" name="member-meaning"></textarea>
@@ -112,13 +115,14 @@
               <option>Social media</option>
               <option>Just browsing</option>
             </select>
+            <!-- Groups the signup action and Pulse video for the Flexbox layout -->
           </label>
           <div class="join-bottom">
             <div class="pulse-action">
               <button>Become your Pulse</button>
               <p>🤘Music For The People🫶</p>
             </div>
-
+            <!-- Playable Pulse video with audio controls -->
             <video controls width="300">
               <source src="pulse-video.mp4" type="video/mp4" />
               Your browser does not support the video element.
