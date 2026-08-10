@@ -111,9 +111,15 @@ textarea:focus {
 }
 
 #member-email:valid {
+  border: 2px solid seagreen;
+}
+
+input:invalid {
+  border: 2px dashed darkorange;
 }
 
 /* Centers the signup button and tagline together */
+.pulse-action {
   width: fit-content;
   text-align: center;
 }
