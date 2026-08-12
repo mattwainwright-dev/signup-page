@@ -182,7 +182,7 @@ button:hover {
 
 #field-notes div,
 #field-notes p {
-  outline: 2px solid seagreen;
+  outline: 2px solid whitesmoke;
 }
 
 /* Makes the signature line quieter so the main Pulse content stays the focus */
