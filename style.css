@@ -21,7 +21,7 @@ h3 {
 
 /* Keeps the Pulse background image fixed behind the entire page */
 .pulse-bg {
-  position: fixed;
+  position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
@@ -77,6 +77,20 @@ nav a:hover {
     0 0 8px cyan,
     0 0 16px cyan,
     0 0 24px cyan;
+}
+
+/* Lower-page grid and particle background */
+.lower-page {
+  position: relative;
+  background-image: url("pulse-fixed-bg.png");
+  background-size: 100% auto;
+  background-repeat: repeat-y;
+  background-position: top center;
+}
+
+.lower-page section {
+  position: relative;
+  z-index: 1;
 }
 
 /* Why Pulse card layout */
@@ -182,7 +196,7 @@ button:hover {
 
 #field-notes div,
 #field-notes p {
-  outline: 2px solid whitesmoke;
+  outline: 2px solid cyan;
 }
 
 /* Makes the signature line quieter so the main Pulse content stays the focus */
