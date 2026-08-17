@@ -19,7 +19,7 @@ h3 {
   -webkit-text-stroke: 3px black;
 }
 
-/* Keeps the Pulse background image fixed behind the entire page */
+/* Positions the Pulse logo background behind the hero section */
 .pulse-bg {
   position: absolute;
   inset: 0;
@@ -82,13 +82,36 @@ nav a:hover {
 /* Lower-page grid and particle background */
 .lower-page {
   position: relative;
+}
+
+/* Full-width grid that fades in below the hero artwork */
+.lower-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
   background-image: url("pulse-fixed-bg.png");
   background-size: 100% auto;
   background-repeat: repeat-y;
   background-position: top center;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    black 10rem
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    black 10rem
+  );
+  z-index: 0;
 }
 
-.lower-page section {
+.lower-page section,
+.lower-page footer {
   position: relative;
   z-index: 1;
 }
