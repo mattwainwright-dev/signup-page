@@ -73,17 +73,17 @@ nav a:hover {
 /* Keeps the hero link readable over the bright Pulse logo */
 #welcome > a {
   text-shadow:
+    0 0 2px black,
     0 0 4px black,
-    0 0 8px black,
-    0 0 12px black;
+    0 0 6px black;
 }
 
 /* Adds a dark glow behind the hero tagline for readability */
 #welcome p {
   text-shadow:
-    0 0 6px black,
-    0 0 10px black,
-    0 0 14px black;
+    0 0 3px black,
+    0 0 5px black,
+    0 0 7px black;
 }
 
 /* Gives the hero Find your Pulse link the same hover glow as the nav */
