@@ -4,6 +4,15 @@ body {
   color: whitesmoke;
 }
 
+/* Full-page Pulse grid and particle background */
+body {
+  background-image: url("pulse-particles-bg.png");
+  background-size: 100% auto;
+  background-repeat: repeat-y;
+  background-position: top center;
+  background-color: black;
+}
+
 /* Gives links and headings the Pulse cyan color */
 a,
 h1,
@@ -19,14 +28,12 @@ h3 {
   -webkit-text-stroke: 3px black;
 }
 
-/* Positions the Pulse logo background behind the hero section */
-.pulse-bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
+/* Pulse hero artwork */
+.pulse-hero {
+  display: block;
+  width: min(950px, 100%);
+  height: auto;
+  margin: 0 auto 1.5rem;
 }
 
 /* Keeps the page content layered above the Pulse background */
@@ -35,6 +42,14 @@ main,
 footer {
   position: relative;
   z-index: 1;
+}
+
+body > header {
+  padding-bottom: 0;
+}
+
+body > main {
+  padding-top: 0;
 }
 
 /*Pulse nav hover glow*/
@@ -48,7 +63,7 @@ nav a:hover {
 /* Hero section layout and spacing */
 #welcome {
   text-align: center;
-  padding: 4rem 1rem;
+  padding: 0 1rem 4rem;
 }
 /* Pulse hero visual effects */
 #welcome h1 {
@@ -93,7 +108,7 @@ nav a:hover {
   left: 50%;
   width: 100vw;
   transform: translateX(-50%);
-  background-image: url("pulse-fixed-bg.png");
+  background-image: url("pulse-particles-bg.png");
   background-size: 100% auto;
   background-repeat: repeat-y;
   background-position: top center;
@@ -179,17 +194,18 @@ input:invalid {
   box-shadow: 0 0 0 4px black;
 }
 
-/* Styles the signup button with Pulse cyan and black text */
+/* Styles the signup button with a black Pulse look */
 button {
-  background-color: cyan;
-  color: black;
+  background: black;
+  color: cyan;
+  border: 1px solid cyan;
+  box-shadow: 0 0 10px cyan;
 }
 
-/* Adds a cyan glow to the signup button on hover */
+/* Fills the signup button with cyan on hover */
 button:hover {
   background-color: cyan;
   color: black;
-  box-shadow: 0 0 14px cyan;
 }
 
 /* MFTP pulse effect */
